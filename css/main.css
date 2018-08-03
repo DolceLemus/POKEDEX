@@ -15,14 +15,14 @@
 
 #cont-i-d{
     background-color: #BBD773;
-    height: 22em;
+    height: 16em;
 }
 
 #image{
-    height: 20em;
-    width: 20em;
+    height: 15em;
+    width: 15em;
 }
-#description{
+#ability{
     margin-top: 2em !important;
 }
 

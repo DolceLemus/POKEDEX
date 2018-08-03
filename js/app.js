@@ -3,7 +3,6 @@ const getPokemon = function (ev) {
   ev.preventDefault();
   const number = $("#keyword").val();
   const getURL = "https://pokeapi.co/api/v2/pokemon/";
-  const getURLDesc = "https://pokeapi.co/api/v1/description/";
   const getURLLocat = "https://pokeapi.co/api/v2/location/";
   const getURLAbil = "https://pokeapi.co/api/v2/ability/";
 
@@ -17,10 +16,7 @@ const getPokemon = function (ev) {
     $("#weight").text("Weight:" + data.weight);
   });
 
-  $.get(getURLDesc + number, function (data) {
-    console.log(data);
-    $("#description").text("Description: " + data.description);
-  });
+ 
 
   $.get(getURLLocat + number, function (data) {
     console.log(data);
@@ -30,6 +26,7 @@ const getPokemon = function (ev) {
   $.get(getURLAbil + number, function (data) {
     console.log(data);
     $("#short-ability").text("Ability: " + data.effect_entries[0].effect);
+    $("#ability").text("Ability: " + data.effect_entries[0].short_effect);
       //HABLA jajajaja
       $("btn-search").click(responsiveVoice.speak(data.effect_entries[0].effect));
   });
