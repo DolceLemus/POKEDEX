@@ -4,18 +4,18 @@
 
 #site{
 
-    background-color: #283868;
+    background-color: #4FA8CA;
     height: 5em;
 }
 
 #cont-type{
-    background-color: #AD4E0C;
+    background-color: #CF7688;
     height: 3em;
 }
 
 #cont-i-d{
-    background-color: #BABABA;
-    height: 50em;
+    background-color: #BBD773;
+    height: 22em;
 }
 
 #image{
@@ -24,4 +24,11 @@
 }
 #description{
     margin-top: 2em !important;
+}
+
+#cont-caracteristics{
+    background-color: #E2944A;
+    height: 30em;
+    margin-top: -1em !important;
+    color: #992E34;
 }

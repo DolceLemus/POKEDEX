@@ -4,18 +4,35 @@ const getPokemon = function (ev) {
   const number = $("#keyword").val();
   const getURL = "https://pokeapi.co/api/v2/pokemon/";
   const getURLDesc = "https://pokeapi.co/api/v1/description/";
+  const getURLLocat = "https://pokeapi.co/api/v2/location/";
+  const getURLAbil = "https://pokeapi.co/api/v2/ability/";
 
-  $.get(getURL + number,  function(pokemon) {
-      console.log(pokemon);
-    $("#name").text("Name: " + pokemon.name);
-    $("#image").attr("src",pokemon.sprites.front_default);
+
+
+  $.get(getURL + number, function (data) {
+    console.log(data);
+    $("#name").text("Name: " + data.name);
+    $("#image").attr("src", data.sprites.front_shiny);
+    $("#basic-exp").text("Exp.:" + data.base_experience);
+    $("#weight").text("Weight:" + data.weight);
   });
 
-  $.get(getURLDesc + number,  function(pokemon) {
-  $("#description").text("Description: " + pokemon.description);
-    //HABLA jajajaja
-  $("btn-search").click(responsiveVoice.speak(pokemon.description));
-});
+  $.get(getURLDesc + number, function (data) {
+    console.log(data);
+    $("#description").text("Description: " + data.description);
+  });
+
+  $.get(getURLLocat + number, function (data) {
+    console.log(data);
+    $("#region").text("Region: " + data.region.name);
+  });
+
+  $.get(getURLAbil + number, function (data) {
+    console.log(data);
+    $("#short-ability").text("Ability: " + data.effect_entries[0].effect);
+      //HABLA jajajaja
+      $("btn-search").click(responsiveVoice.speak(data.effect_entries[0].effect));
+  });
 }
 
 $("#site").submit(getPokemon); 
