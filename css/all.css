@@ -1,0 +1,34 @@
+*{
+    font-family: 'Exo 2', sans-serif;
+}
+
+#site{
+
+    background-color: #4FA8CA;
+    height: 5em;
+}
+
+#cont-type{
+    background-color: #CF7688;
+    height: 3em;
+}
+
+#cont-i-d{
+    background-color: #BBD773;
+    height: 16em;
+}
+
+#image{
+    height: 15em;
+    width: 15em;
+}
+#ability{
+    margin-top: 2em !important;
+}
+
+#cont-caracteristics{
+    background-color: #E2944A;
+    height: 30em;
+    margin-top: -1em !important;
+    color: #992E34;
+}
