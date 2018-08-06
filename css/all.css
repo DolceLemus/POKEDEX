@@ -32,3 +32,17 @@
     margin-top: -1em !important;
     color: #992E34;
 }
+
+#pokemon{
+    display: inline-block;
+    background-color: gray;
+    margin: 0.3em;
+    color: aliceblue;
+    width: 18%;
+    text-align: center;
+}
+
+#btn-search{
+    background-color: #BBD773;
+    border: none;
+}

@@ -32,3 +32,8 @@
     margin-top: -1em !important;
     color: #992E34;
 }
+
+#btn-search, #btn-list{
+    background-color: #BBD773;
+    border: 0px;
+}

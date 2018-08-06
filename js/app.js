@@ -1,3 +1,4 @@
+$(document).ready(function () {
 
 
 
@@ -41,7 +42,7 @@
   }
 
   $("#site").submit(getPokemon);
-
+})
 
 // sources
 // https://www.w3schools.com/jquery/event_preventdefault.asp

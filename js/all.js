@@ -1,8 +1,8 @@
 $(document).ready(function () {
 
      const url = 'https://pokeapi.co/api/v2/pokedex/1';
-     const template = function (name, picture) {
-        var t = "<div class='element'><img src='" + picture + "'/><p>'" + name + "'</p></div>"
+     const template = function (name, picture,id) {
+        var t = "<div id='pokemon'><img src='" + picture + "'/><p>'" + name + "'</p><p> ID: '" + id + "'</p></div>"
         return t;
       }
 
@@ -15,13 +15,15 @@ $(document).ready(function () {
             pokemones.forEach(element => {
                 let picture = 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/' + element.entry_number + '.png'; 
                 let name = element.pokemon_species.name;
-                $('#list').append(template(name,picture));
+                let id = element.entry_number;
+                $('#list').append(template(name,picture,id));
             });
         })
         .catch(function (error) {
             console.log(JSON.stringify(error));
-        });   
-  
+        });  
+        
+    
 
 })
 
